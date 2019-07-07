@@ -6,3 +6,4 @@ RUN git clone https://github.com/Teradata/kylo
 RUN cd kylo; mvn clean install
 
 # take artefacts from $HOME/.m2/repository/com/thinkbiganalytics/kylo
+# adding this string to trigger the build on Dockerhub
