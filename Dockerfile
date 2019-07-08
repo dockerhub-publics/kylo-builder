@@ -1,4 +1,5 @@
-FROM maven:3.5.3-jdk-8 AS build
+# FROM maven:3.5.3-jdk-8 AS build
+FROM zenika/alpine-maven AS build
 
 WORKDIR /root
 ARG MAVEN_SKIP_RC=true  
