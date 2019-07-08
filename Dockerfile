@@ -12,4 +12,4 @@ RUN cd && curl https://s3-us-west-2.amazonaws.com/thinkbig.kylo/m2.tgz | tar xzC
 
 FROM alpine:latest
 RUN apk --no-cache add ca-certificates
-COPY --from=build /root/m2_kylo .
+COPY --from=build /root/m2_kylo m2_kylo
