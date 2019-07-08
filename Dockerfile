@@ -2,7 +2,7 @@ FROM maven:3.5.3-jdk-8 AS build
 
 WORKDIR /root
 ARG MAVEN_SKIP_RC=true  
-ARG NODE_OPTIONS="--max-old-space-size=1048"
+ARG NODE_OPTIONS="--max-old-space-size=2048"
 RUN apt update; apt install -y rpm && rm -rf /var/lib/apt/lists/*
 RUN cd && curl https://s3-us-west-2.amazonaws.com/thinkbig.kylo/m2.tgz | tar xzC $HOME \
     && git clone https://github.com/Teradata/kylo && cd kylo && mvn -X clean install \
